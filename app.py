@@ -8,7 +8,7 @@ def home():
     return "Flask API работает на Railway!"
 
 @app.route("/data")
-def data():
+def get_data():
     data = {"User 1", "priducts: 28"}
     return jsonify(data)
 
