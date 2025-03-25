@@ -1,11 +1,16 @@
 import os
-from flask import Flask
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
     return "Flask API работает на Railway!"
+
+@app.route("/data")
+def data():
+    data = {"User 1", "priducts: 28"}
+    return jsonify(data)
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
