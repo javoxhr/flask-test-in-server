@@ -9,7 +9,7 @@ def home():
 
 @app.route("/data")
 def get_data():
-    data = {"User 1", "priducts: 28"}
+    data = {"users": ["Alice", "Bob", "Charlie"]}
     return jsonify(data)
 
 if __name__ == "__main__":
